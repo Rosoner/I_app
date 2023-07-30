@@ -1,0 +1,46 @@
+header {
+    background: #f1ea83;
+    background: linear-gradient(0deg, rgb(58, 57, 54) 0%, rgb(31, 117, 7) 35%, rgb(6, 223, 10) 100%);
+}
+
+header ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+header ul span {
+    color: white;
+    padding: 0.5em;
+}
+
+.mini-navbar ul {
+    border: 1px solid #144604;
+    border-radius: 0.3em;
+    padding-left: 0;
+    width: 100%;
+}
+
+header li {
+    list-style: none;
+    margin: .35em;
+    padding: 0 .95em;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.mini-navbar ul {
+    background-color: #a7b86b;
+    border-radius: 5px;
+}
+
+.mini-navbar ul li+li {
+    border-left: 1px solid lightgrey;
+    padding-left: .5em;
+}

@@ -1,0 +1,22 @@
+
+footer {
+    background: rgb(240, 218, 216);
+    ;
+    margin-top: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 1366px;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.7 em;
+    text-align: center;
+}
+
+footer span {
+    font-size: 1.5em;
+}
+

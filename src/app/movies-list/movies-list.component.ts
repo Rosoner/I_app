@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Movie } from '../types/movie';
+import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-movies-list',
@@ -11,12 +12,19 @@ export class MoviesListComponent implements OnInit {
   moviesList: Movie[] = [];
   isLoading: boolean = true;
 
-  constructor (private apiService: ApiService) {}
+  constructor (
+    private apiService: ApiService, 
+    private userService: UserService
+    ) {}
+
+  get isLogged(): boolean {
+      return this.userService.isLogged;
+    }
 
   ngOnInit(): void {
     this.apiService.getMovies().subscribe({
       next: (movies) => {
-      //  console.log(movies[0]);
+      // console.log(movies[0]);
       this.moviesList = movies;
       this.isLoading = false;
     },

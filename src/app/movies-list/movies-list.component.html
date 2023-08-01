@@ -1,6 +1,3 @@
-    <div> Movies list</div>
-    
-
     <main>
         <div *ngIf="isLoading">
             <app-loader />
@@ -11,8 +8,9 @@
             <div *ngFor="let movie of moviesList" class="movie-container">
                 <div class="movie-name-wrapper">
                     <div class="movie-name">
-                        <a href="#" class="normal">
-                            <h2>{{movie.movieName}}</h2>
+                        <a [routerLink]="movie._id" class="normal">
+                            <h2>{{movie.themeName}}</h2>
+                         
                         </a>
                         <div class="columns">
                             <div>
@@ -22,7 +20,8 @@
                                 </div>
                             </div>
                             <div class="subscribers">
-                                <!-- <button class="subscribe">Subscribe</button> -->
+                                <button *ngIf="isLogged" class="subscribe">Subscribe</button>
+
                                 <p>Subscribers: <span>{{ movie.subscribers.length }}</span></p>
                             </div>
                         </div>

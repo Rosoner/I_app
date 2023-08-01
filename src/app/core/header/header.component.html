@@ -1,31 +1,41 @@
 <header>
     <div class="mini-navbar-wrap">
-        <div class="logo-wrap">
-            <p class="logo"><span class="logo">Movies library</span></p>
-        </div>
-        <div *ngIf="isLoggedIn" class="mini-navbar">
-            <ul>
-                <li>
-                    <a href="#">Login</a>
-                </li>
-                <li>
-                    <a href="#">Register</a>
-                </li>
-            </ul>
-        </div>
+      <div class="logo-wrap">
+        <p class="logo"><span class="logo">Movies library</span></p>
+      </div>
+  
+      <div class="mini-navbar">
+        <ul *ngIf="!isLoggedIn">
+          <li>
+            <a routerLink="/login">Login</a>
+          </li>
+          <li>
+            <a routerLink="/register">Register</a>
+          </li>
+        </ul>
+  
+        <ul *ngIf="isLoggedIn">
+          <li>
+            <a routerLink="/profile">{{ firstName }}'s profile</a>
+          </li>
+          <li (click)="logout()">
+            <a>Logout</a>
+          </li>
+        </ul>
+      </div>
     </div>
     <nav>
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">Movies</a>
-            </li>
-            <li>
-                <a href="#">New Movie</a>
-            </li>
-        </ul>
+      <ul>
+        <li>
+          <a routerLink="/home">Home</a>
+        </li>
+        <li>
+          <a routerLink="/movies">Movies</a>
+        </li>
+        <li>
+          <a routerLink="/add-movie">New Movie</a>
+        </li>
+      </ul>
     </nav>
-
-</header>
+  </header>
+  

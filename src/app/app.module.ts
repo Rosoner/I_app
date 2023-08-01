@@ -9,20 +9,26 @@ import { MoviesListComponent } from './movies-list/movies-list.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
 import { HttpClientModule } from '@angular/common/http'
 import { SharedModule } from './shared/shared.module';
+import { HomeComponent } from './home/home.component';
+import { UserModule } from './user/user.module';
+import { MovieModule } from './movie/movie.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     MoviesListComponent,
-    PostsListComponent
+    PostsListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    UserModule,
+    MovieModule
   ],
   providers: [],
   bootstrap: [AppComponent]

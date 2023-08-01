@@ -16,9 +16,9 @@ export class PostsListComponent implements OnInit {
   ngOnInit(): void {
     
     this.apiService.getPosts(5).subscribe({
-      next: (themes) => {
-      // console.log(themes[0]);
-      this.postsList = themes;
+      next: (movies) => {
+      // console.log(movies[0]);
+      this.postsList = movies;
       this.isLoading = false;
     },
       error: (err) => {

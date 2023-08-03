@@ -1,8 +1,9 @@
 <div class="container">
   <div class="new-theme-border">
     <div class="header-background">
-      <span>New Theme</span>
+      <span>New Movie</span>
     </div>
+
     <form #form="ngForm" (ngSubmit)="newMovieSubmitHandler(form)">
       <div class="new-theme-title">
         <label for="themeName">Title <span class="red">*</span></label>
@@ -25,6 +26,32 @@
           </p>
         </ng-container>
       </div>
+
+
+      <!-- <form #form="ngForm" (ngSubmit)="newMovieSubmitHandler(form)">
+        <div class="new-theme-title">
+          <label for="tel">Genre <span class="red">*</span></label>
+          <input
+            type="text"
+            name="tel"
+            id="tel"
+            ngModel
+            #inputName="ngModel"
+            required
+            minlength="3"
+          />
+  
+          <ng-container *ngIf="inputName.touched">
+            <p class="error" *ngIf="inputName.errors?.['required']">
+              Theme name is required.
+            </p>
+            <p class="error" *ngIf="inputName.errors?.['minlength']">
+              Theme name must be at least 5 characters long.
+            </p>
+          </ng-container>
+        </div> -->
+
+
 
       <div class="new-theme-content">
         <label for="postText">Post <span class="red">*</span></label>

@@ -51,11 +51,12 @@ form.login, form.register {
     padding: 0.55em;
     border-top-left-radius: 0.3em;
     border-bottom-left-radius: 0.3em;
-    background-color: #e9ecef;
+    background-color: #bcf8df;
+    
 }
 
 .login a, .register a {
-    color: #007bff;
+    color: #007a47;
 }
 
 .login a:hover, .register a:hover {

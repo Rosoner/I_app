@@ -7,15 +7,15 @@
     <ng-container *ngIf="!isEditMode">
       <div class="flex">
         <p>Username:</p>
-        <p>{{ profileDetails?.username }}</p>
+        <p>{{ profileDetails.username }}</p>
       </div>
       <div class="flex">
         <p>Email:</p>
-        <p>{{ profileDetails?.email }}</p>
+        <p>{{ profileDetails.email }}</p>
       </div>
       <div class="flex">
         <p>Phone:</p>
-        <p>+359 {{ profileDetails?.tel }}</p>
+        <p>+359 {{ profileDetails.tel }}</p>
       </div>
       <button class="edit-button" (click)="toggleEditMode()">Edit</button>
     </ng-container>
@@ -35,7 +35,7 @@
             Username is required!
           </p>
           <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">
-            Username's length should not be less than 5!
+            Username's length should not be less than 3!
           </p>
         </ng-container>
 

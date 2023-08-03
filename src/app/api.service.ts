@@ -19,6 +19,11 @@ export class ApiService {
     const {apiUrl} = environment
     return this.http.get<Movie[]>(`${apiUrl}/themes`);
    }
+
+   createMovie(themeName: string, postText: string) {
+    return this.http.post<Movie>('/api/themes', { themeName, postText });
+  }
+  
   getPosts(limit?: number) {
     const {apiUrl} = environment
     const limitFilter = limit ? `?limit=${limit}` : '';

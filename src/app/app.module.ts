@@ -10,8 +10,10 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { HttpClientModule } from '@angular/common/http'
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
-import { UserModule } from './user/user.module';
 import { MovieModule } from './movie/movie.module';
+import { appInterceptorProvider } from './app.interceptor';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,18 +21,20 @@ import { MovieModule } from './movie/movie.module';
     MainComponent,
     MoviesListComponent,
     PostsListComponent,
-    HomeComponent
+    HomeComponent,
+    NotFoundComponent,
+    AuthenticateComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CoreModule,
     HttpClientModule,
+    CoreModule,
     SharedModule,
-    UserModule,
-    MovieModule
+    MovieModule,
+    AppRoutingModule, 
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

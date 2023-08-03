@@ -12,4 +12,11 @@ export class HomeComponent {
   get isLogged(): boolean {
     return this.userService.isLogged;
   }
+
+  get username(): string {
+    return this.userService.user?.username || '';
+  }
+
+ 
+
 }

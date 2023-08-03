@@ -9,7 +9,7 @@
                 <div class="movie-name-wrapper">
                     <div class="movie-name">
                         <a [routerLink]="movie._id" class="normal">
-                            <h2>{{movie.themeName}}</h2>
+                            <h2>{{movie.themeName | slice : 2 }}</h2>
                          
                         </a>
                         <div class="columns">

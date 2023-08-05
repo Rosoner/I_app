@@ -22,17 +22,16 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MoviesListComponent,
     PostsListComponent,
     HomeComponent,
-    NotFoundComponent,
     AuthenticateComponent,
-    
+    NotFoundComponent
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule,
+    BrowserModule,   
     CoreModule,
-    SharedModule,
     MovieModule,
-    AppRoutingModule, 
+    HttpClientModule, 
+    SharedModule,
+    AppRoutingModule   
   ],
   providers: [appInterceptorProvider],
   bootstrap: [AppComponent]

@@ -10,7 +10,7 @@
         <div>
             <div *ngFor="let post of postsList" class="aside-movie">
                 <a href="/movies">
-                    <h3>{{ post.themeId.themeName }}</h3>
+                    <h3>{{ post.movieId.movieName }}</h3>
                     <p>{{ post.userId.username }}</p>
                     <p>
                         <span>{{ post.created_at | elapsedTime }}</span>

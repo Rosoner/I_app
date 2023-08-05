@@ -1,34 +1,40 @@
-    <main>
-        <div *ngIf="isLoading">
-            <app-loader />
-        </div>
-    
+<main>
+    <div *ngIf="isLoading">
+        <app-loader />
+    </div>
 
-        <div class="movie-title"  *ngIf="!isLoading">
-            <div *ngFor="let movie of moviesList" class="movie-container">
-                <div class="movie-name-wrapper">
-                    <div class="movie-name">
-                        <a [routerLink]="movie._id" class="normal">
-                            <h2>{{movie.themeName | slice : 2 }}</h2>
-                         
-                        </a>
-                        <div class="columns">
-                            <div>
-                                <p>Date: <time>{{movie.created_at}}</time></p>
-                                <div class="nick-name">
-                                    <p>Username: <span>{{movie.userId.username}}</span></p>
-                                </div>
-                            </div>
-                            <div class="subscribers">
-                                <button *ngIf="isLogged" class="subscribe">Subscribe</button>
 
-                                <p>Subscribers: <span>{{ movie.subscribers.length }}</span></p>
+    <div class="movie-title"  *ngIf="!isLoading">
+        <div *ngFor="let movie of moviesList" class="movie-container">
+            <div class="movie-name-wrapper">
+                <div class="movie-name">
+                    <a [routerLink]="movie._id" class="normal">
+                        <h2>{{movie.movieName | slice : 0 }}</h2>
+                     
+                    </a>
+                    <div class="columns">
+                        <div>
+                            <p>Summary: <time>{{movie.movieText | slice : 0 }}</time></p>
+
+                            <p>Date: <time>{{movie.created_at}}</time></p>
+                            <div class="nick-name">
+                                <p>Username: <span>{{movie.userId.username}}</span></p>
                             </div>
+
+                            <button [routerLink]="movie._id" class="green-button">Details</button>
+                            
                         </div>
+
+                        <!--<div class="subscribers">
+                            <button *ngIf="isLogged" class="subscribe">Subscribe</button>                              
+                            <p>Subscribers: <span>{{ movie.subscribers.length }}</span></p>
+                        </div> -->
+                        
                     </div>
                 </div>
             </div>
-            <!-- movie component  -->
-           
         </div>
-    </main>
+        <!-- movie component  -->
+       
+    </div>
+</main>

@@ -13,15 +13,22 @@ export class ApiService {
 
   getMovie(id: string) {
     const { apiUrl } = environment;
-    return this.http.get<Movie>(`${apiUrl}/themes/${id}`);
+    return this.http.get<Movie>(`${apiUrl}/movies/${id}`);
   }
-   getMovies() {
+  //  getMovies() {
+  //   const {apiUrl} = environment
+  //   return this.http.get<Movie[]>(`${apiUrl}/movies`);
+  //  }
+
+   getMovies(limit?: number) {
     const {apiUrl} = environment
-    return this.http.get<Movie[]>(`${apiUrl}/themes`);
+    const limitFilter = limit ? `?limit=${limit}` : '';
+
+    return this.http.get<Movie[]>(`${apiUrl}/movies${limitFilter}`);
    }
 
-   createMovie(themeName: string, postText: string) {
-    return this.http.post<Movie>('/api/themes', { themeName, postText });
+   createMovie(movieName: string, movieGenre: string, movieProducer: string, movieText: string) {
+    return this.http.post<Movie>('/api/movies', { movieName, movieGenre, movieProducer, movieText });
   }
   
   getPosts(limit?: number) {

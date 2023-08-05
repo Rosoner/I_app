@@ -1,5 +1,5 @@
 export interface UserId {
-    themes: string [],
+    movies: string [],
     posts:  string [],
     _id: string,
     tel: string,

@@ -11,6 +11,7 @@ import { UserService } from '../user/user.service';
 export class MoviesListComponent implements OnInit {
   moviesList: Movie[] = [];
   isLoading: boolean = true;
+  // thereAreNoPosts: boolean = false;
 
   constructor (
     private apiService: ApiService, 
@@ -22,11 +23,17 @@ export class MoviesListComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.apiService.getMovies().subscribe({
+    this.apiService.getMovies(5).subscribe({
       next: (movies) => {
       // console.log(movies[0]);
       this.moviesList = movies;
+
+      // if (this.postsList.length === 0) {
+        //   this.thereAreNoPosts = true;
+        // }
+
       this.isLoading = false;
+    
     },
       error: (err) => {
         this.isLoading = false;

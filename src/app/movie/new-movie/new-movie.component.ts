@@ -16,8 +16,8 @@ export class NewMovieComponent {
       return;
     }
 
-    const { themeName, postText } = form.value;
-    this.apiService.createMovie(themeName, postText).subscribe(() => {
+    const { movieName, movieGenre, movieProducer, movieText } = form.value;
+    this.apiService.createMovie(movieName, movieGenre, movieProducer, movieText).subscribe(() => {
       this.router.navigate(['/movies']);
     });
   }

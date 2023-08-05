@@ -12,6 +12,8 @@ import { UserService } from 'src/app/user/user.service';
 export class SingleMovieComponent implements OnInit {
   movie: Movie | undefined;
 
+  loggedInUser: string | null = ''; // Del
+
   constructor(
     private apiService: ApiService,
     private activatedRoute: ActivatedRoute,
@@ -34,4 +36,25 @@ export class SingleMovieComponent implements OnInit {
       console.log({ movie });
     });
   }
+
+  // deletePoem(): void {
+  //   // if (!localStorage.getItem('accessToken')) {
+  //   //   this.userService.isLoggedIn = false;
+  //   //   this.router.navigate(['/']);
+  //   // }
+
+  //   const id = this.activatedRoute.snapshot.params['id'];
+
+  //   this.apiService.deleteMovie(id).subscribe({
+  //     next: (response) => {
+  //       // this.userService.showMessage('Poem deleted successfully!');
+  //       this.router.navigate(['movies/']);
+  //     },
+  //     error: () => {
+  //       return 
+  //       // this.userService.showMessage(error.error.message);
+  //     },
+  //   });
+  // }
+
 }

@@ -6,7 +6,7 @@ export interface Post {
     _id: string,
     text: string,
     userId: UserId,
-    themeId: Movie
+    movieId: Movie
     created_at: string,
     updatedAt: string,
     __v: number

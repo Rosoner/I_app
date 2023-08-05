@@ -68,3 +68,7 @@
 time {
     font-weight: bold;
 }
+
+.green-button {
+    background-color: green;
+  }

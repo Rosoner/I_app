@@ -21,12 +21,17 @@
   </div>
 
   <div class="poem" *ngIf="movie">
-    <h1>{{ movie.movieName }}</h1>
-    <h3>{{ movie.summary }}</h3>
+    <h1><span>Title:</span>{{ movie.movieName }}</h1>
+    <h3><span>Genre:</span>{{ movie.movieGenre }}</h3>
+    <h3><span>Producer:</span>{{ movie.movieProducer }}</h3>
+    <h3><span>Summary:</span> {{ movie.summary }}</h3>
     <h5>Written by: {{ movie.username }}</h5>
-    <div class="content">{{ movie.content }}</div>
+    <div class="content"><span>Content:</span> {{ movie.content }}</div>
   </div>
 </div>
+
+
+
 
 <div class="edit-poem" *ngIf="editingMovie">
   <div class="controls">
@@ -41,32 +46,95 @@
   </div>
 
   <form #editMovieForm="ngForm" (ngSubmit)="saveChanges()">
+ <!-- movie name -->
+     <div class="form-group" class="inputField">
+    <p>Movie title:</p>
+    <input
+      type="text"
+      id="title"
+      name="movieName"
+      #movieNameInput="ngModel"
+      ngModel
+      required
+      minlength="3"
+      [value]="movie.movieName"
+    />
+  </div>
+
+  <div *ngIf="movieNameInput.touched" class="inputField">
+    <div *ngIf="movieNameInput.errors?.['minlength']">
+      Title must be at least 3 characters!
+    </div>
+  </div>
+
+<!-- movie genre -->
+
+<div class="form-group" class="inputField">
+  <p>Movie genre:</p>
+  <input
+    type="text"
+    id="title"
+    name="movieGenre"
+    #movieGenreInput="ngModel"
+    ngModel
+    required
+    minlength="3"
+    [value]="movie.movieGenre"
+  />
+</div>
+
+<div *ngIf="movieGenreInput.touched" class="inputField">
+  <div *ngIf="movieGenreInput.errors?.['minlength']">
+    Title must be at least 3 characters!
+  </div>
+</div>
+
+    <!-- movie producer -->
+
     <div class="form-group" class="inputField">
-      <p>Movie title:</p>
+      <p>Movie producer:</p>
       <input
         type="text"
         id="title"
-        name="title"
-        #movieTitleInput
+        name="movieProducer"
+        #movieProducerInput="ngModel"
         ngModel
         required
         minlength="3"
+        [value]="movie.movieProducer"
       />
+    </div>
+  
+    <div *ngIf="movieProducerInput.touched" class="inputField">
+      <div *ngIf="movieProducerInput.errors?.['minlength']">
+        Title must be at least 3 characters!
+      </div>
     </div>
 
-    <div class="form-group" class="inputField">
-      <p>Movie summary:</p>
-      <input
-        type="text"
-        id="summary"
-        name="summary"
-        #movieSummaryInput="ngModel"
-        ngModel
-        required
-        minlength="3"
-        [value]="movie.summary"
-      />
+  <!-- movie summary -->
+
+  <div class="form-group" class="inputField">
+    <p>Movie summary:</p>
+    <input
+      type="text"
+      id="summary"
+      name="summary"
+      #movieSummaryInput="ngModel"
+      ngModel
+      cols="30"
+      rows="5"
+      required
+      minlength="3"
+      [value]="movie.summary"
+    />
+  </div>
+
+  <div *ngIf="movieSummaryInput.touched" class="inputField">
+    <div *ngIf="movieSummaryInput.errors?.['minlength']">
+      Summary must be at least 3 characters!
     </div>
+  </div>
+  
 
     <div class="form-group" class="inputField">
       <p>Movie:</p>

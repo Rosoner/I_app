@@ -37,4 +37,12 @@ export class ApiService {
 
     return this.http.get<Post[]>(`${apiUrl}/posts${limitFilter}`);
    }
+
+
+// Delete   not here!!!
+   deleteMovie(id: string) {  
+
+    const {apiUrl} = environment
+    return this.http.delete<Movie>(`${apiUrl}/movies/${id}`);
+  }
 }

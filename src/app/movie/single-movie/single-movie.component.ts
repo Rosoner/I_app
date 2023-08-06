@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Movie } from 'src/app/types/movie';
 import { UserService } from 'src/app/user/user.service';
@@ -17,7 +17,8 @@ export class SingleMovieComponent implements OnInit {
   constructor(
     private apiService: ApiService,
     private activatedRoute: ActivatedRoute,
-    private userService: UserService
+    private userService: UserService,
+    private router: Router,
   ) {}
 
   get isLogged(): boolean {
@@ -37,24 +38,38 @@ export class SingleMovieComponent implements OnInit {
     });
   }
 
-  // deletePoem(): void {
+  // deleteMovie() {
   //   // if (!localStorage.getItem('accessToken')) {
   //   //   this.userService.isLoggedIn = false;
   //   //   this.router.navigate(['/']);
   //   // }
 
-  //   const id = this.activatedRoute.snapshot.params['id'];
+  //  // const id = this.activatedRoute.snapshot.params['movieId'];
+  //   const id = this.activatedRoute.snapshot.params['_id'] // ok
+  //   console.log(id)
 
   //   this.apiService.deleteMovie(id).subscribe({
-  //     next: (response) => {
+  //     next: () => {
   //       // this.userService.showMessage('Poem deleted successfully!');
-  //       this.router.navigate(['movies/']);
+  //       // this.router.navigate(['movies/']);
   //     },
   //     error: () => {
-  //       return 
+  //       console.log('Sorry') 
   //       // this.userService.showMessage(error.error.message);
   //     },
   //   });
   // }
+
+
+  deleteMovie() {
+   
+    const id = this.activatedRoute.snapshot.params['_id'] // ok
+    console.log(id)
+
+    this.apiService.deleteMovie(id).subscribe((res) => {
+      this.router.navigate(['/']);
+    });
+    
+  }
 
 }

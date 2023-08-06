@@ -55,23 +55,18 @@
                 <form>  
                     <!--  <textarea name="postText" id="comment" cols="30" rows="10"></textarea> -->                    
                     <button class="green-button">Cancel</button>
-                    <button class="green-button">Delete</button>
+                    <button class="green-button" (click)="deleteMovie()" >Delete</button>
 
 
-<!-- 
-
-
-    
-<button
+                    <!--     
+                        <button
                           *ngIf="movie.userId == loggedInUser"
                           
                           class="green-button"
                           (click)="deleteMovie()"
                         >
                           Delete Movie
-                    </button>   
-
--->
+                    </button> -->
 
                 </form>
             </div>

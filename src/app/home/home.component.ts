@@ -1,22 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
-  constructor(private userService: UserService) {}
+export class HomeComponent implements OnInit {
+  isLoggedIn: boolean = false;
+  constructor(public userService: UserService) {}
 
-  get isLogged(): boolean {
-    return this.userService.isLogged;
+  ngOnInit(): void {
+    if (localStorage.getItem('accessToken')) {
+      this.userService.isLoggedIn = true;
+      this.userService.username = localStorage.getItem('username');
+    }
   }
-
-  get username(): string {
-    return this.userService.user?.username || '';
-  }
-
- 
-
 }

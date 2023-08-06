@@ -1,26 +1,38 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ErrorComponent } from './core/error/error.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { MoviesComponent } from './movies/movies.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { AuthLoginActivate } from './home/guard/auth.login.activate';
+import { ProfileComponent } from './profile/profile.component';
+import { AuthActivate } from './home/guard/auth.activate';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/home',
-  },
-  {
-    path: 'home',
     component: HomeComponent,
   },
   {
-    path: 'auth',
-    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+    path: 'movies',
+    component: MoviesComponent,
   },
-  { path: 'error', component: ErrorComponent },
-
-  { path: '**', component: NotFoundComponent }
+  {
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [AuthLoginActivate],
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+    canActivate: [AuthLoginActivate],
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [AuthActivate],
+  },
 ];
 
 @NgModule({

@@ -3,37 +3,46 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
-import { MainComponent } from './main/main.component';
-import { MoviesListComponent } from './movies-list/movies-list.component';
-import { PostsListComponent } from './posts-list/posts-list.component';
-import { HttpClientModule } from '@angular/common/http'
-import { SharedModule } from './shared/shared.module';
+import { UserComponent } from './user/user/user.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MoviesComponent } from './movies/movies.component';
 import { HomeComponent } from './home/home.component';
-import { MovieModule } from './movie/movie.module';
-import { appInterceptorProvider } from './app.interceptor';
-import { AuthenticateComponent } from './authenticate/authenticate.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { MovieCardComponent } from './movies/movie-card/movie-card.component';
+import { NewMovieComponent } from './movies/new-movie/new-movie.component';
+import { FormsModule } from '@angular/forms';
+import { MovieRoutingModule } from './movies/movies-routing.module';
+import { MovieComponent } from './movies/movie/movie.component';
+import { NavigationComponent } from './home/navigation/navigation.component';
+import { MyMoviesComponent } from './movies/my-movies/my-movies.component';
+import { UserModule } from './user/user/user.module';
+import { EditMovieComponent } from './movies/edit-movie/edit-moviecomponent';
+
+/* import { appInterceptorProvider } from './app-interceptor'; */
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
-    MoviesListComponent,
-    PostsListComponent,
+    UserComponent,
+    MoviesComponent,
     HomeComponent,
-    AuthenticateComponent,
-    NotFoundComponent
+    MovieCardComponent,
+    NewMovieComponent,
+    MovieComponent,
+    NavigationComponent,
+    MyMoviesComponent,
+    EditMovieComponent,
   ],
   imports: [
-    BrowserModule,   
-    CoreModule,
-    MovieModule,
-    HttpClientModule, 
-    SharedModule,
-    AppRoutingModule   
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MovieRoutingModule,
+    FormsModule,
+    UserModule,
   ],
-  providers: [appInterceptorProvider],
-  bootstrap: [AppComponent]
+  providers: [
+    /* appInterceptorProvider */
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

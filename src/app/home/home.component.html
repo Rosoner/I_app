@@ -1,25 +1,31 @@
 <div class="container">
-    <div class="welcome">
-        <h3>Welcome {{ username }} to the coolest movies librarie!</h3>
-        
-        <div class="profile">
-            <img src="/assets/Movie_home.png" alt="default user" />
-        <p>Movies at the librarie is a place, where you can post your favourite movies, comment, and discuss problems.</p>
-        <div class="logged">
-            <ul *ngIf="!isLogged">
-                <li>
-                    <a routerLink="/auth/login">
-                        <i class="fas fa-sign-in-alt"></i>
-                        Login
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="/auth/register">
-                        <i class="fas fa-user-plus"></i>
-                        Register
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>        
+
+  <br>
+ <p *ngIf="this.userService.username">
+    Hello <span routerLink="profile">{{ this.userService.username }}</span>!
+     to Movie library a website dedicated to sharing movies.
+  </p>
+
+  <br>
+
+  <div *ngIf="!this.userService.isLoggedIn">
+    
+    <p>
+      Guests can browse movies, registered users can post their own moviey on the
+      website.
+    </p>
+    <p>
+      You can <span routerLink="login" class="highlight">Login</span> or
+      <span routerLink="register" class="highlight">Register</span> for an account.
+    </p>
+  </div>
+
+
+
+<div class="profile">
+    <img src="/assets/Movie_home.png" alt="default user" />
+  <p>Movie library is a place, where you can post your favourite movies.
+  </p>
+
+ 
 </div>

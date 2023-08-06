@@ -1,47 +1,36 @@
-/* welcome component */
-
-.welcome {
-    padding: 0.3em 0.5em;
-    border: 1px solid #999;
-    border-radius: 0.3em;
-    font-size: 0.8em;
-    margin-top: 1em;
+p {
+    text-align: center;
 }
 
-.welcome h3 {
-    background-color: #fff597;
-    border-radius: 0.3em;
-    width: 100%;
-    padding: 0.3em 1em;
+span {
+    font-weight: bold;
 }
 
-.welcome p {
-    padding: 1em;
-    border-bottom: 1px solid #999;
-    font-style: normal;
-}
-
-.welcome a {
-    color: white;
-    text-decoration: none;
-    background-color: #4ebced;
-    border: none;
-    border-radius: 0.3em;
-    padding: 0.5em 5.2em;
-    margin: 1em;
-}
-
-.welcome a:hover {
+span:hover {
     cursor: pointer;
 }
 
-.welcome ul {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0;
-    margin: 1em;
+div {
+    margin: 0 auto;
+    text-align: center;
 }
 
-.welcome li {
-    list-style: none;
+.container {
+    margin-top: 32px;;
+}
+
+.highlight {
+    background-color: lightgray;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.highlight:hover {
+    background-color: lightgray;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: darkgray;
+    color: white;
+    transition-property: background-color;
+    transition-duration: 100ms;
 }

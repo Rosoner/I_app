@@ -1,0 +1,88 @@
+<div *ngIf="isLoading" class="loader">Loading movie...</div>
+
+<div class="view-poem" *ngIf="!editingMovie">
+  <div class="controls">
+    <button
+      *ngIf="movie._ownerId == loggedInUser"
+      class="button"
+      class="inputField"
+      (click)="deleteMovie()"
+    >
+      Delete Movie
+    </button>
+    <button
+      *ngIf="movie._ownerId == loggedInUser"
+      class="button"
+      class="inputField"
+      (click)="toggleEditing()"
+    >
+      Edit Movie
+    </button>
+  </div>
+
+  <div class="poem" *ngIf="movie">
+    <h1>{{ movie.movieName }}</h1>
+    <h3>{{ movie.summary }}</h3>
+    <h5>Written by: {{ movie.username }}</h5>
+    <div class="content">{{ movie.content }}</div>
+  </div>
+</div>
+
+<div class="edit-poem" *ngIf="editingMovie">
+  <div class="controls">
+    <button
+      *ngIf="movie._ownerId == loggedInUser"
+      class="button"
+      class="inputField"
+      (click)="editingMovie = false"
+    >
+      Cancel
+    </button>
+  </div>
+
+  <form #editMovieForm="ngForm" (ngSubmit)="saveChanges()">
+    <div class="form-group" class="inputField">
+      <p>Movie title:</p>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        #movieTitleInput
+        ngModel
+        required
+        minlength="3"
+      />
+    </div>
+
+    <div class="form-group" class="inputField">
+      <p>Movie summary:</p>
+      <input
+        type="text"
+        id="summary"
+        name="summary"
+        #movieSummaryInput="ngModel"
+        ngModel
+        required
+        minlength="3"
+        [value]="movie.summary"
+      />
+    </div>
+
+    <div class="form-group" class="inputField">
+      <p>Movie:</p>
+      <textarea
+        type="text"
+        id="content"
+        name="content"
+        #movieContentInput="ngModel"
+        ngModel
+        cols="30"
+        rows="10"
+        required
+        [value]="movie.content"
+      ></textarea>
+    </div>
+
+    <button>Save changes</button>
+  </form>
+</div>

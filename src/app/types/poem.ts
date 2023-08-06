@@ -1,9 +1,7 @@
-export interface Movie {
+export interface Poem {
     content: string,
     summary: string,
-    movieName: string,
-    movieGenre: string,
-    movieProducer: string,
+    title: string,
     _id: string,
     _ownerId: string,
     username: string,

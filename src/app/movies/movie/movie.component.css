@@ -1,0 +1,93 @@
+.poem {
+    text-align: center;
+    max-width: 500px;
+    width: fit-content;
+    margin: 0 auto;
+    white-space: pre-wrap;
+}
+
+div {
+    overflow: auto;
+}
+
+.content {
+
+    text-align: left;
+}
+
+button {
+    padding: 10px 100px;
+    border-radius: 15px;    
+    margin: 0 auto;
+    cursor: pointer;    
+    margin: 0 10px;
+    
+}
+
+button:hover {
+    animation-name: fade;
+    animation-duration: 100ms;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+@keyframes fade {
+    from {background-color: white;}
+    to {background-color: lightgray;}
+}
+
+.inputField {
+    display: inline-block;
+    text-align: center;
+}
+
+.controls {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 15px;
+
+}
+
+textarea {
+    max-width: 500px;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 10px;
+    padding: 10px 15px;    
+}
+
+p {
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.inputField input {
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px 15px;    
+}
+
+@keyframes fade {
+    from {background-color: white;}
+    to {background-color: lightgray;}
+}
+
+
+
+label {
+    font-weight: bold;
+    padding: 15px;
+}
+
+
+.messageField {
+    margin: 0 auto;
+    text-align: center;
+}

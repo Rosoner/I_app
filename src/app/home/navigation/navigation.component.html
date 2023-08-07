@@ -1,5 +1,5 @@
 <nav>
-    <span class="website-title">Movie library</span>
+    <span class="website-title" >Movie library</span>
     <div class="button" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Home</div>
     <div class="button" routerLink="/movies" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Movie</div>
     <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/movies/new-movie" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">New Movie</div>
@@ -10,3 +10,4 @@
     <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/" (click)="logout()">Logout</div>
 </nav>
 <div *ngIf="this.userService.message" class="message-box" (click)="clearMessage()">{{this.userService.message}}</div>
+

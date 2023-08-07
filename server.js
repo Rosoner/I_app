@@ -1441,60 +1441,7 @@
     sessions: {},
   };
   var seedData = {
-    artwork: {
-      
-      "1840a313-225c-416a-817a-9954d4609f7c": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        title: "Girl with a pearl earring",
-        summary: "A tronie oil painting",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/800px-1665_Girl_with_a_Pearl_Earring.jpg",
-        software: "Traditional",
-        _createdOn: 1617194210928,
-        
-      },
-      "126777f5-3277-42ad-b874-76d043b069cb": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        title: "Strife",
-        summary: "A digital artwork featuring Strife from Darksiders",
-        imageUrl: "https://cdna.artstation.com/p/assets/images/images/060/332/208/large/kris-strifedarksiders.jpg?1678324951",
-        software: "Procreate",
-        _createdOn: 1617194295474,
-      },
-      "136777f5-3277-42ad-b874-76d043b069cb": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        title: "Illusion of sitting",
-        summary: "A mesmer performing an illusion of sitting",
-        imageUrl: "https://cdna.artstation.com/p/assets/images/images/059/497/038/large/kris-gw2-tiny.jpg?1676506208",
-        software: "Photoshop",
-        _createdOn: 1617194295480,
-      },
-      "1840a313-225c-416a-817a-9954d4609fc7": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        title: "Twilight",
-        summary: "A legendary greatsword in the game Guild Wars 2",
-        imageUrl: "https://cdna.artstation.com/p/assets/images/images/058/277/002/large/kris-twilight.jpg?1673805062",
-        software: "Clip Studio Paint",
-        _createdOn: 1617194210980,
-      },
-      "1840a313-225c-416a-817a-9954d4609gc7": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        title: "Liliana Vess",
-        summary: "A human planeswalker from Dominiaria, who is a master necromancer and a healer",
-        imageUrl: "https://images.ctfassets.net/s5n2t79q9icq/h613zL8X9FIE9TYwvZ0Nx/33977cd6fa6efac263521c9a86b61ad2/liliana-vess-1920.jpg?q=80",
-        software: "Photoshop",
-        _createdOn: 1617194210980,
-      },
-    },
-    likes: {},
-    poems: {
-      "a8j0a313-225c-416a-81ca-9954e5609l7c": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        title: "Rose and whiskey",
-        summary: "A poem about a particular friday night you wont forget.",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
-        username: "Johnny Boy"
-      },      
-    },
+   
     movies: {
       "a8j0a313-225c-416a-81ca-995ge5699l7g": {
         _ownerId: "847ec027-f659-4086-8052-5173e2f9c73a",

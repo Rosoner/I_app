@@ -2,17 +2,17 @@ nav > .button {
     max-width: fit-content;
     display: inline-block;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 @keyframes fade {
-    from {background-color: lightgray; color: black}
-    to {background-color: darkgray; color: white;}
+    from {background-color: rgb(235, 233, 134); color: black}
+    to {background-color: rgb(220, 240, 108); color: rgb(207, 216, 84);}
   }
 
 nav > .button:hover {
-    background-color: darkgray;
-    color: white;
+    background-color: rgb(235, 232, 199);
+    color: rgb(243, 234, 110);
     animation-name: fade;
     animation-duration: 100ms;
     cursor: pointer;
@@ -21,11 +21,11 @@ nav > .button:hover {
 @keyframes message-box-slide {
     from {
         height: 0px; 
-        background-color: white;
+        background-color: rgb(238, 236, 108);
     }
     to {
         height: 15px;
-        background-color: lightgray;
+        background-color: rgb(240, 238, 121);
     }
 }
 
@@ -57,7 +57,7 @@ nav {
 } 
 
 .active-link {
-    background-color: lightgray;
+    background-color: rgb(238, 238, 182);
 }
 
 span {
@@ -68,3 +68,22 @@ span {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
+.mini-navbar ul {
+    border: 1px solid #16300e;
+    border-radius: 0.9em;
+    padding-left: 0;
+    width: 100%;
+}
+
+
+.website-title {
+    color: white;
+    padding: 5px 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: rgb(248, 217, 130);
+    margin: 0 auto;
+    padding-left: 0;
+    width: 100%;
+}

@@ -1,113 +1,122 @@
 <form #newMovieForm="ngForm" (ngSubmit)="submitHandler()">
 
-   <!-- movie name -->
+  <!-- movie name -->
 
   <div class="form-group" class="inputField">
     <p>Movie title:</p>
-    <input
-      type="text"
-      id="title"
-      name="movieName"
-      #movieNameInput="ngModel"
-      ngModel
-      required
-      minlength="3"
-    />
+    <input 
+    type="text" 
+    id="movieName" 
+    name="movieName" 
+    #movieNameInput="ngModel" 
+    ngModel 
+    required 
+    minlength="2" />
   </div>
 
-  <div *ngIf="movieNameInput.touched" class="inputField">
-    <div *ngIf="movieNameInput.errors?.['minlength']">
-      Title must be at least 3 characters!
-    </div>
-  </div>
+  <ng-container *ngIf="movieNameInput.touched" class="inputField">
+    <p class="error" *ngIf="movieNameInput.errors?.['required']">
+      Title is required.
+    </p>
+    <p class="error" *ngIf="movieNameInput.errors?.['minlength']">
+      Title must be at least 2 characters long.
+    </p>
+  </ng-container>
 
   <!-- movie genre -->
 
   <div class="form-group" class="inputField">
     <p>Movie genre:</p>
-    <input
-      type="text"
-      id="title"
-      name="movieGenre"
-      #movieGenreInput="ngModel"
-      ngModel
-      required
-      minlength="3"
-    />
+    <input 
+    type="text" 
+    id="movieGenre" 
+    name="movieGenre" 
+    #movieGenreInput="ngModel" 
+    ngModel 
+    required 
+    minlength="4" />
   </div>
 
-  <div *ngIf="movieGenreInput.touched" class="inputField">
-    <div *ngIf="movieGenreInput.errors?.['minlength']">
-      Title must be at least 3 characters!
-    </div>
+  <ng-container *ngIf="movieGenreInput.touched" class="inputField">
+    <p class="error" *ngIf="movieGenreInput.errors?.['required']">
+      Movie genre is required.
+    </p>
+    <p class="error" *ngIf="movieGenreInput.errors?.['minlength']">
+      Movie genre must be at least 4 characters long.
+    </p>
+  </ng-container>
+
+  <!-- movie producer -->
+
+  <div class="form-group" class="inputField">
+    <p>Movie producer:</p>
+    <input 
+    type="text" 
+    id="movieProducer" 
+    name="movieProducer" 
+    #movieProducerInput="ngModel" 
+    ngModel 
+    required
+    minlength="3" />
   </div>
 
-
-    <!-- movie producer -->
-
-    <div class="form-group" class="inputField">
-      <p>Movie producer:</p>
-      <input
-        type="text"
-        id="title"
-        name="movieProducer"
-        #movieProducerInput="ngModel"
-        ngModel
-        required
-        minlength="3"
-      />
-    </div>
-  
-    <div *ngIf="movieProducerInput.touched" class="inputField">
-      <div *ngIf="movieProducerInput.errors?.['minlength']">
-        Title must be at least 3 characters!
-      </div>
-    </div>
-
-
+  <ng-container *ngIf="movieProducerInput.touched" class="inputField">
+    <p class="error" *ngIf="movieProducerInput.errors?.['required']">
+      Movie producer is required.
+    </p>
+    <p class="error" *ngIf="movieProducerInput.errors?.['minlength']">
+      Movie producer must be at least 3 characters long.
+    </p>
+  </ng-container>
 
   <!-- movie summary -->
 
   <div class="form-group" class="inputField">
     <p>Movie summary:</p>
-    <input
-      type="text"
-      id="summary"
-      name="summary"
-      #movieSummaryInput="ngModel"
-      ngModel
-      required
-      minlength="3"
-    />
+    <input 
+    type="text" 
+    id="summary" 
+    name="summary" 
+    #movieSummaryInput="ngModel" 
+    ngModel cols="30" 
+    rows="10" 
+    required
+    minlength="10" />
   </div>
 
-  <div *ngIf="movieSummaryInput.touched" class="inputField">
-    <div *ngIf="movieSummaryInput.errors?.['minlength']">
-      Summary must be at least 3 characters!
-    </div>
-  </div>
+  <ng-container *ngIf="movieSummaryInput.touched" class="inputField">
+    <p class="error" *ngIf="movieSummaryInput.errors?.['required']">
+      Movie summary is required.
+    </p>
+    <p class="error" *ngIf="movieSummaryInput.errors?.['minlength']">
+      Movie summary must be at least 10 characters long.
+    </p>
+  </ng-container>
 
   <!-- movie content -->
 
   <div class="form-group" class="inputField">
     <p>Movie:</p>
-    <textarea
-      type="text"
-      id="content"
-      name="content"
-      #movieContentInput="ngModel"
-      ngModel
-      cols="30"
-      rows="10"
-      minlength="1"
-      required
-    ></textarea>
+    <textarea 
+    type="text" 
+    id="content" 
+    name="content" 
+    #movieContentInput="ngModel" 
+    ngModel
+    cols="30" 
+    rows="10"
+    minlength="20" 
+    required></textarea>
 
-    <div *ngIf="movieContentInput.touched" class="inputField">
-      <div *ngIf="movieContentInput.errors?.['required']">
-        Content cannot be empty!
-      </div>
-    </div>
+    <ng-container *ngIf="movieContentInput.touched" class="inputField">
+      <p class="error" *ngIf="movieContentInput.errors?.['required']">
+        Movie content is required.
+      </p>
+      <p class="error" *ngIf="movieContentInput.errors?.['minlength']">
+        Movie content must be at least 20 characters long.
+      </p>
+    </ng-container>
+
   </div>
   <button class="inputField">Submit</button>
 </form>

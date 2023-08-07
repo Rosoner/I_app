@@ -58,3 +58,15 @@ label {
     margin: 0 auto;
     text-align: center;
 }
+
+.msg {
+    margin: 0 auto;
+    text-align: center;
+    color: green;    
+}
+
+.error {
+    margin: 0 auto;
+    text-align: center;
+    color: red;    
+}

@@ -16,20 +16,20 @@ div {
 }
 
 .container {
-    margin-top: 32px;;
+    margin-top: 32px;
 }
 
 .highlight {
-    background-color: lightgray;
+    
     padding: 5px;
-    border-radius: 8px;
+    
 }
 
 .highlight:hover {
-    background-color: lightgray;
+    background-color: rgb(161, 147, 35);
     padding: 5px;
     border-radius: 8px;
-    background-color: darkgray;
+    background-color: rgb(161, 147, 35);
     color: white;
     transition-property: background-color;
     transition-duration: 100ms;

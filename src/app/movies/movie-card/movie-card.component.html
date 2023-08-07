@@ -1,10 +1,16 @@
 <div class="card">
   <h1 id="title"><span>Title:</span>{{ data.movieName }}</h1>
+
+  <div class="profile">
+    <img src="/assets/titanic.jpg" alt="default user" />
+  </div>
+
   <h2 id="title"><span>Genre:</span>{{ data.movieGenre }}</h2>
   <h2 id="title"><span>Producer:</span>{{ data.movieProducer }}</h2>
   <div id="summary"><span>Summary:</span> {{data.summary}}</div>
+  <br>
   <div id="content"><span>Content:</span>{{ data.content }}</div>
-  <p>...</p>
-  <div id="Author"><span>Written by:</span> {{ data.username }}</div>
+  <br>
+  <div id="Author"><span>Posted by:</span> {{ data.username }}</div>
   
 </div>

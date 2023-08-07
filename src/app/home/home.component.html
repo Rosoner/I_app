@@ -11,16 +11,11 @@
   <div *ngIf="!this.userService.isLoggedIn">
     
     <p>
-      Guests can browse movies, registered users can post their own moviey on the
-      website.
-    </p>
-    <p>
-      You can <span routerLink="login" class="highlight">Login</span> or
-      <span routerLink="register" class="highlight">Register</span> for an account.
-    </p>
+      If you want to post your favourite movie, please<span routerLink="login" class="highlight">Login</span>or<span routerLink="register" class="highlight">Register</span>into your account.      
+    </p>    
   </div>
 
-
+<br>
 
 <div class="profile">
     <img src="/assets/Movie_home.png" alt="default user" />

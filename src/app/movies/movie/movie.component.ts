@@ -78,7 +78,7 @@ export class MovieComponent implements OnInit {
 
     this.apiService.deleteMovie(id).subscribe({
       next: (response) => {
-        this.userService.showMessage('Moviedeleted successfully!');
+        this.userService.showMessage('Movie deleted successfully!');
         this.router.navigate(['movies/my-movies']);
       },
       error: (error) => {

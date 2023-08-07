@@ -11,8 +11,8 @@ nav > .button {
   }
 
 nav > .button:hover {
-    background-color: rgb(235, 232, 199);
-    color: rgb(243, 234, 110);
+    background-color: rgb(161, 147, 35);
+    color: rgb(22, 21, 8);
     animation-name: fade;
     animation-duration: 100ms;
     cursor: pointer;
@@ -21,22 +21,22 @@ nav > .button:hover {
 @keyframes message-box-slide {
     from {
         height: 0px; 
-        background-color: rgb(238, 236, 108);
+        background-color: green;
     }
     to {
         height: 15px;
-        background-color: rgb(240, 238, 121);
+        background-color: green;       
     }
 }
 
 .message-box {
-    color: black;
-    padding: 15px 25px;
+    color: white;
+    padding: 5px 10px;
     text-align: center;
     animation-name: message-box-slide;
     border-radius: 10px;
     animation-duration: 200ms;
-    background-color: lightgray;
+    background-color: green;
     width: fit-content;
     margin: 0 auto;
 }

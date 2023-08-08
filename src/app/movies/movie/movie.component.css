@@ -126,6 +126,6 @@ label {
     box-sizing: border-box;
     border: 2px solid #4e491c;
     border-radius: 10px;
-    background-color: #faeeaa;
+    background-color: rgb(230, 224, 179);
     resize: none;
   }

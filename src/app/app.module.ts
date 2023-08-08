@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user/user.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,6 +16,8 @@ import { NavigationComponent } from './home/navigation/navigation.component';
 import { MyMoviesComponent } from './movies/my-movies/my-movies.component';
 import { UserModule } from './user/user/user.module';
 import { EditMovieComponent } from './movies/edit-movie/edit-moviecomponent';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 
 /* import { appInterceptorProvider } from './app-interceptor'; */
 
@@ -31,6 +33,7 @@ import { EditMovieComponent } from './movies/edit-movie/edit-moviecomponent';
     NavigationComponent,
     MyMoviesComponent,
     EditMovieComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

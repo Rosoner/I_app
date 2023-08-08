@@ -79,3 +79,10 @@ label {
     width: 200px;
     height: 200px;
   }
+
+  #hr-wrapper{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }

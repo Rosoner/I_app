@@ -129,3 +129,26 @@ label {
     background-color: rgb(230, 224, 179);
     resize: none;
   }
+
+  #details-wrapper {
+    height: 800px;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(230, 224, 179);
+    margin: 50px auto;
+    
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px ridge rgb(230, 224, 179);
+    box-shadow: 0 0 10px 0 rgba(2, 2, 2, 0.2), 0 3px 3px 0 rgba(2, 2, 2, 0.24);
+    
+  }
+  #details-wrapper img {
+    padding: 40px;
+    max-width: 100%;
+    min-height: 200px;
+    width: 200px;
+    height: 200px;
+  }

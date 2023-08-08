@@ -21,7 +21,7 @@ export class NewMovieComponent implements OnInit {
       return;
     }
 
-    let submitData: { movieName: string; movieGenre: string; movieProducer: string; summary: string; content: string } =
+    let submitData: { movieName: string; image: string; movieGenre: string; movieProducer: string; summary: string; content: string } =
       form.value;
 
     this.api.storeMovie(submitData).subscribe({

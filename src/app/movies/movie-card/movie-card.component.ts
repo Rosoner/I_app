@@ -9,6 +9,7 @@ import { Movie } from 'src/app/types/movie';
 export class MovieCardComponent implements OnChanges {
   @Input() data: Movie = {
     movieName: '',
+    image: '',
     movieGenre: '',
     movieProducer: '',
     summary: '',

@@ -12,6 +12,7 @@
 
   <div class="poem" *ngIf="movie">
     <h1><span>Title:</span>{{ movie.movieName }}</h1>
+    <h1><span>Image:</span>{{ movie.image }}</h1>
     <h3><span>Genre:</span>{{ movie.movieGenre }}</h3>
     <h3><span>Producer:</span>{{ movie.movieProducer }}</h3>
     <h3><span>Summary:</span> {{ movie.summary }}</h3>
@@ -49,6 +50,15 @@
         Title must be at least 2 characters long.
       </p>
     </ng-container>
+
+      <!-- movie image -->
+      <div class="form-group" class="inputField">
+        <p>Movie image:</p>
+        <input type="text" id="image" name="image" #imageInput="ngModel" ngModel
+          [value]="movie.image" />
+      </div>
+  
+     
 
 
     <!-- movie genre -->

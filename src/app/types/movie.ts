@@ -1,5 +1,6 @@
 export interface Movie {
     content: string,
+    image: string,
     summary: string,
     movieName: string,
     movieGenre: string,

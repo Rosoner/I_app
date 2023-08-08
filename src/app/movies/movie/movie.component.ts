@@ -15,6 +15,7 @@ export class MovieComponent implements OnInit {
 
   movie: Movie = {
     movieName: '',
+    image: '',
     movieGenre: '',
     movieProducer: '',
     summary: '',
@@ -26,6 +27,7 @@ export class MovieComponent implements OnInit {
 
   movieDataBuffer: Movie = {
     movieName: '',
+    image: '',
     movieGenre: '',
     movieProducer: '',
     summary: '',
@@ -102,6 +104,7 @@ export class MovieComponent implements OnInit {
     setTimeout(() => {
       if (this.editingMovie) {
         this.editMovieForm?.controls['movieName'].setValue(this.movie.movieName);
+        this.editMovieForm?.controls['image'].setValue(this.movie.movieName);
         this.editMovieForm?.controls['movieGenre'].setValue(this.movie.movieGenre);
         this.editMovieForm?.controls['movieProducer'].setValue(this.movie.movieProducer);
         this.editMovieForm?.controls['summary'].setValue(this.movie.summary);

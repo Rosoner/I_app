@@ -1445,6 +1445,7 @@
     movies: {
       "a8j0a313-225c-416a-81ca-995ge5699l7g": {
         _ownerId: "847ec027-f659-4086-8052-5173e2f9c73a",
+        image: "/assets/indiana.jpg",
         movieName: "Indiana Jones",
         movieGenre: "Adventure",
         movieProducer: "Frank Marshall",
@@ -1454,6 +1455,7 @@
       }, 
       "a8j0a313-225c-416a-81ca-995ge5620l7g": {
         _ownerId: "847ec027-f659-4086-8352-5274e2f9c73a",
+        image: "/assets/gamesOfTrones1.jpg",
         movieName: "Game of Thrones",
         movieGenre: "Action",
         movieProducer: "Mark Huffam",

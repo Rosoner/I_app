@@ -1,7 +1,47 @@
 <div *ngIf="isLoading" class="loader">Loading movie...</div>
 
 <div class="view-poem" *ngIf="!editingMovie">
-  <div class="controls">
+  
+
+  <div class="textarea1">
+
+  <div class="poem" *ngIf="movie">
+    
+    
+    <p>
+      <strong>Title: </strong><span class="title">{{movie.movieName}}</span>
+    </p>
+
+   <!--
+      <p>
+      <strong>Image: </strong><span class="name">{{ movie.image }}</span>
+    </p>
+    -->    
+    
+    <p>
+      <strong>Image: </strong><span class="name"><img src="/assets/{{ movie.image }}" /></span>
+    </p>
+
+    <p>
+      <strong>Genre: </strong><span class="name">{{ movie.movieGenre }}</span>
+    </p>
+    <p>
+      <strong>Producer: </strong><span class="name">{{ movie.movieProducer }}</span>
+    </p>
+    <p>
+      <strong>Summary: </strong><span class="summary">{{ movie.summary }}</span>
+    </p>
+    <p>
+      <strong>Content: </strong><span class="content">{{ movie.content }}</span>
+    </p>  
+    <br>
+    <p>
+      <strong>Written by: </strong><span class="name">{{ movie.username }}</span>
+    </p>
+  </div>
+</div>
+
+<div class="controls">
     <button *ngIf="movie._ownerId == loggedInUser" class="button" class="inputField" (click)="deleteMovie()">
       Delete Movie
     </button>
@@ -10,16 +50,8 @@
     </button>
   </div>
 
-  <div class="poem" *ngIf="movie">
-    <h1><span>Title:</span>{{ movie.movieName }}</h1>
-    <h1><span>Image:</span>{{ movie.image }}</h1>
-    <h3><span>Genre:</span>{{ movie.movieGenre }}</h3>
-    <h3><span>Producer:</span>{{ movie.movieProducer }}</h3>
-    <h3><span>Summary:</span> {{ movie.summary }}</h3>
-    <h5>Written by: {{ movie.username }}</h5>
-    <div class="content"><span>Content:</span> {{ movie.content }}</div>
-  </div>
 </div>
+
 
 
 <div class="edit-poem" *ngIf="editingMovie">
@@ -32,7 +64,7 @@
 
 
 
-  <form #editMovieForm="ngForm" (ngSubmit)="saveChanges()">
+  <form class="textarea" #editMovieForm="ngForm" (ngSubmit)="saveChanges()">
 
 
     <!-- movie name -->
@@ -58,8 +90,7 @@
           [value]="movie.image" />
       </div>
   
-     
-
+      
 
     <!-- movie genre -->
 
@@ -99,8 +130,8 @@
 
     <div class="form-group" class="inputField">
       <p>Movie summary:</p>
-      <input type="text" id="summary" name="summary" #movieSummaryInput="ngModel" ngModel cols="30" rows="5" required
-        minlength="10" [value]="movie.summary" />
+      <textarea type="text" id="summary" name="summary" #movieSummaryInput="ngModel" ngModel cols="30" rows="5" required
+        minlength="10" [value]="movie.summary" ></textarea>
     </div>
 
     <ng-container *ngIf="movieSummaryInput.touched" class="inputField">
@@ -129,16 +160,11 @@
       </p>
     </ng-container>
     
-
     <div class="controls">
       <button *ngIf="movie._ownerId == loggedInUser" class="button" class="inputField" (click)="editingMovie = false">
         Cancel
       </button>
+      <button>Update</button>
     </div>
-
-    <br>
-
-    <button>Save changes</button>
-
   </form>
 </div>

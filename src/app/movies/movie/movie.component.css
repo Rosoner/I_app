@@ -12,12 +12,12 @@ div {
 
 .content {
 
-    text-align: left;
+    text-align: justify;
 }
 
 button {
-    padding: 10px 100px;
-    border-radius: 15px;    
+    padding: 10px 40px;
+    border-radius: 10px;    
     margin: 0 auto;
     cursor: pointer;    
     margin: 0 10px;
@@ -27,18 +27,19 @@ button {
 button:hover {
     animation-name: fade;
     animation-duration: 100ms;
-    background-color: lightgray;
+    background-color: rgb(161, 147, 35);
     cursor: pointer;
 }
 
 @keyframes fade {
-    from {background-color: white;}
-    to {background-color: lightgray;}
+    from {background-color: rgb(235, 233, 134); color: black}
+    to {background-color: rgb(220, 240, 108); color: rgb(207, 216, 84);}
 }
 
 .inputField {
     display: inline-block;
     text-align: center;
+
 }
 
 .controls {
@@ -51,8 +52,8 @@ button:hover {
 textarea {
     max-width: 500px;
     min-width: 200px;
-    min-height: 200px;
-    border-radius: 10px;
+    min-height: 100px;
+    border-radius: 5px;
     padding: 10px 15px;    
 }
 
@@ -70,8 +71,8 @@ form {
 
 .inputField input {
     width: 200px;
-    border-radius: 10px;
-    padding: 10px 15px;    
+    border-radius: 5px;
+    padding: 10px 15px;  
 }
 
 @keyframes fade {
@@ -104,5 +105,27 @@ label {
     color: red;    
 }
 
+/* NEW */
 
+.title {
+    margin: 0 auto;
+    text-align: center;
+}
+.summary {
+    margin: 0 auto;
+    text-align: justify;
+}
+.content {
+    text-align: left;
+}
 
+.textarea {
+    width: 100%;
+    height: 900px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #4e491c;
+    border-radius: 10px;
+    background-color: #faeeaa;
+    resize: none;
+  }

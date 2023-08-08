@@ -1,5 +1,5 @@
 <nav>
-    <span class="website-title" >Movie library</span>
+    <span class="website-title" >Movies library</span>
     <div class="button" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Home</div>
     <div class="button" routerLink="/movies" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Movie</div>
     <div *ngIf="this.userService.isLoggedIn" class="button" routerLink="/movies/new-movie" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">New Movie</div>

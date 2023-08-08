@@ -5,25 +5,25 @@
 
 .inputField input {
     width: 200px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px 15px;    
 }
 
 button {
-    padding: 10px 100px;
-    border-radius: 15px;    
+    padding: 10px 40px;
+    border-radius:10px;    
     margin: 50px auto;
 }
 
 @keyframes fade {
-    from {background-color: white;}
-    to {background-color: lightgray;}
+    from {background-color: rgb(235, 233, 134); color: black}
+    to {background-color: rgb(220, 240, 108); color: rgb(207, 216, 84);}
 }
 
 button:hover {
     animation-name: fade;
     animation-duration: 100ms;
-    background-color: lightgray;
+    background-color: rgb(161, 147, 35);
     cursor: pointer;
 }
 
@@ -37,4 +37,22 @@ label {
     margin: 0 auto;
     text-align: center;
     padding: 15px;
+}
+
+
+.textarea {
+    
+    height: 330px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #4e491c;
+    border-radius: 10px;
+    background-color: #faeeaa;
+    resize: none;
+  }
+
+  .error {
+    margin: 0 auto;
+    text-align: center;
+    color: red;    
 }

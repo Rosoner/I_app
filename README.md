@@ -11,7 +11,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 - Supported requests are GET, POST, PUT, PATCH, DELETE
 
 - Authentication
-        Test user: peter@abv.bg 
+        test user: peter@abv.bg /
         password: 123456
 
 - Register

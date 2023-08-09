@@ -1,11 +1,11 @@
 <div *ngIf="isLoading" class="loader">Loading movie...</div>
 
-<div class="view-poem" *ngIf="!editingMovie">
+<div class="view-movie" *ngIf="!editingMovie">
 
 
   <div class="textarea1">
 
-    <div class="poem" *ngIf="movie">
+    <div class="movie" *ngIf="movie">
 
 
 
@@ -26,83 +26,39 @@
 
 
             <div id="info-wrapper">
-              <h2 id="title"><span>Genre: </span>{{ movie.movieGenre }}</h2>
+              <h2 id="title"><span><strong>Genre: </strong></span>{{ movie.movieGenre }}</h2>
 
 
 
               <h2 id="title"><span>Producer: </span>{{ movie.movieProducer }}</h2>
-              <div id="summary"><span>Summary: </span> {{movie.summary}}</div>
+              <div id="summary"><span><strong>Summary:</strong></span> {{movie.summary}}</div>
               <br>
-              <div id="content"><span>Content: </span>{{ movie.content }}</div>
+              <div id="content"><span><strong>Content: </strong></span>{{ movie.content }}</div>
               <br>
               <br>
+              <div id="Author"><span><strong>Posted by: </strong></span> {{ movie.username }}</div>
+            </div>
 
 
-              <!-- <div class="controls">
+            <div class="controls">
               <button *ngIf="movie._ownerId == loggedInUser" class="button" class="inputField" (click)="deleteMovie()">
                 Delete Movie
               </button>
-              <button *ngIf="movie._ownerId == loggedInUser" class="button" class="inputField" (click)="toggleEditing()">
+              <button *ngIf="movie._ownerId == loggedInUser" class="button" class="inputField"
+                (click)="toggleEditing()">
                 Edit Movie
               </button>
-            </div> -->
-
-
-              <!-- <div id="hr-wrapper">
-              <hr>
-            </div> -->
-              <div id="Author"><span>Posted by: </span> {{ movie.username }}</div>
-
             </div>
           </div>
         </section>
       </div>
-
-      <div class="controls">
-        <button *ngIf="movie._ownerId == loggedInUser" class="button" class="inputField" (click)="deleteMovie()">
-          Delete Movie
-        </button>
-        <button *ngIf="movie._ownerId == loggedInUser" class="button" class="inputField" (click)="toggleEditing()">
-          Edit Movie
-        </button>
-      </div>
-
-      <!-- <div id="details-wrapper">
-    
-    <p>
-      <strong>Title: </strong><span class="title">{{movie.movieName}}</span>
-    </p>
-   
-    <p>
-      <strong>Image: </strong><span class="name"><img src="/assets/{{ movie.image }}" /></span>
-    </p>
-
-    <p>
-      <strong>Genre: </strong><span class="name">{{ movie.movieGenre }}</span>
-    </p>
-    <p>
-      <strong>Producer: </strong><span class="name">{{ movie.movieProducer }}</span>
-    </p>
-    <p>
-      <strong>Summary: </strong><span class="summary">{{ movie.summary }}</span>
-    </p>
-    <p>
-      <strong>Content: </strong><span class="content">{{ movie.content }}</span>
-    </p>  
-    <br>
-    <p>
-      <strong>Written by: </strong><span class="name">{{ movie.username }}</span>
-    </p>
-    </div> -->
     </div>
-
-
   </div>
 </div>
 
+<!-- Edit mode movie -->
 
-
-<div class="edit-poem" *ngIf="editingMovie">
+<div class="edit-movie" *ngIf="editingMovie">
 
   <div class="msg">
     <p>
@@ -134,7 +90,7 @@
     <!-- movie image -->
     <div class="form-group" class="inputField">
       <p>Movie image:</p>
-      <input type="text" id="image" name="image" #imageInput="ngModel" ngModel [value]="movie.image" />
+      <input type="path" id="image" name="image" #imageInput="ngModel" ngModel [value]="movie.image" />
     </div>
 
 

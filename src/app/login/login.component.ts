@@ -40,7 +40,6 @@ export class LoginComponent {
           this.api.dataSave('userId', response._id);
           this.api.dataSave('username', response.username);
 
-          console.log('Login successful!');
           this.router.navigate(['/']);
           this.userService.showMessage('Logged in successfully!');          
         }

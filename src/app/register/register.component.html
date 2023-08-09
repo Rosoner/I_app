@@ -1,92 +1,84 @@
 <div id="details-wrapper">
-<form class="textarea" #registerForm="ngForm" (ngSubmit)="submitHandler()">
-  <!-- Email -->
-  <div class="form-group" class="inputField">
-    <p>Email:</p>
-    <input type="email" id="email" name="email" #emailInput="ngModel" ngModel email required />
-  </div>
+  <form class="textarea" #registerForm="ngForm" (ngSubmit)="submitHandler()">
 
-  <!-- Email error message -->
+    <!-- Email -->
 
-  <ng-container *ngIf="emailInput.touched" class="inputField">
-    <p class="error" *ngIf="emailInput.errors?.['required']">
-      Email is required!
-    </p>
-    <p class="error" *ngIf="emailInput.errors?.['email']">
-      Email is not valid!
-    </p>
-  </ng-container>
-
-
-  <!-- Username -->
-
-  <div class="form-group" class="inputField">
-    <p>Username:</p>
-    <input type="username" id="username" name="username" #usernameInput="ngModel" ngModel username minlength="3"
-      maxlength="20" required />
-  </div>
-
-  <!-- Username error message -->
-
-  <ng-container *ngIf="usernameInput.touched" class="inputField">
-    <p class="error" *ngIf="usernameInput.errors?.['required']">
-      Username is required!
-    </p>
-    <p class="error" *ngIf="usernameInput.errors?.['minlength']">
-      Username must be 3 or more characters long!
-    </p>
-    <p class="error" *ngIf="usernameInput.errors?.['maxlength']">
-      Username must be 20 characters at most!
-    </p>
-  </ng-container>
-
-  <!-- Password -->
-  <div class="form-group" class="inputField">
-    <div>
-      <p>Password:</p>
-      <input type="password" id="password" name="password" ngModel #passwordInput="ngModel" required minlength="4" />
+    <div class="form-group" class="inputField">
+      <p>Email:</p>
+      <input type="email" id="email" name="email" #emailInput="ngModel" ngModel email required />
     </div>
 
-    <!-- Password error message -->
+    <!-- Email error message -->
 
-    <ng-container *ngIf="passwordInput.touched" class="inputField">
-      <p class="error" *ngIf="passwordInput.errors?.['required']">
-        Password is required!
+    <ng-container *ngIf="emailInput.touched" class="inputField">
+      <p class="error" *ngIf="emailInput.errors?.['required']">
+        Email is required!
       </p>
-      <p class="error" *ngIf="passwordInput.errors?.['minlength']">
-        Password must be at least 4 characters long.
+      <p class="error" *ngIf="emailInput.errors?.['email']">
+        Email is not valid!
       </p>
     </ng-container>
 
+    <!-- Username -->
 
-    <!-- Repeat password -->
-
-    <div>
-      <p>Repeat password:</p>
-      <input type="password" id="rePassword" ngModel #rePasswordInput="ngModel" required name="rePassword" />
+    <div class="form-group" class="inputField">
+      <p>Username:</p>
+      <input type="username" id="username" name="username" #usernameInput="ngModel" ngModel username minlength="3"
+        maxlength="20" required />
     </div>
 
-    <!-- Repeat password error message -->
+    <!-- Username error message -->
 
-    <ng-container *ngIf="rePasswordInput.touched" class="inputField">
-      <p class="error" *ngIf="rePasswordInput.errors?.['required']">
-        Repeat password is required!
+    <ng-container *ngIf="usernameInput.touched" class="inputField">
+      <p class="error" *ngIf="usernameInput.errors?.['required']">
+        Username is required!
       </p>
-      <!-- <p class="error" *ngIf="!rePasswordInput.errors?.['matchPasswordsValidator']">
-        Passwords must match!
-    </p> -->
+      <p class="error" *ngIf="usernameInput.errors?.['minlength']">
+        Username must be 3 or more characters long!
+      </p>
+      <p class="error" *ngIf="usernameInput.errors?.['maxlength']">
+        Username must be 20 characters at most!
+      </p>
     </ng-container>
 
+    <!-- Password -->
 
-    <!-- <div *ngIf="passwordInput.touched" class="inputField">
-      <div *ngIf="!passwordInput.errors?.['matchPasswordsValidator']">
-        Passwords must match!
+    <div class="form-group" class="inputField">
+      <div>
+        <p>Password:</p>
+        <input type="password" id="password" name="password" ngModel #passwordInput="ngModel" required minlength="4" />
       </div>
-    </div> -->
 
+      <!-- Password error message -->
 
-  </div>
+      <ng-container *ngIf="passwordInput.touched" class="inputField">
+        <p class="error" *ngIf="passwordInput.errors?.['required']">
+          Password is required!
+        </p>
+        <p class="error" *ngIf="passwordInput.errors?.['minlength']">
+          Password must be at least 4 characters long.
+        </p>
+      </ng-container>
 
-  <button class="inputField">Register</button>
-</form>
+      <!-- Repeat password -->
+
+      <div>
+        <p>Repeat password:</p>
+        <input type="password" id="rePassword" ngModel #rePasswordInput="ngModel" required name="rePassword" />
+      </div>
+
+      <!-- Repeat password error message -->
+
+      <ng-container *ngIf="rePasswordInput.touched" class="inputField">
+        <p class="error" *ngIf="rePasswordInput.errors?.['required']">
+          Repeat password is required!
+        </p>
+        <!-- <p class="error" *ngIf="!rePasswordInput.errors?.['matchPasswordsValidator']">
+        Passwords must match!
+              </p> -->
+      </ng-container>
+
+    </div>
+    <button class="inputField">Register</button>
+  </form>
 </div>

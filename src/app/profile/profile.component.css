@@ -3,7 +3,7 @@
 }
 
 .title {
-    font-weight: bold;
+    font-weight: italic;
     color: rgb(30, 30, 32)
 }
 
@@ -24,11 +24,10 @@
     
   }
   #img-wrapper img {
-    padding: 40px;
+    padding: 30px;
     width: 100%;
-    min-height: 200px;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
 
   #details-wrapper {

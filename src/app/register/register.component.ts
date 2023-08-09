@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NgForm, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { ApiService } from '../api.service';
 import { UserService } from '../user/user.service';
 import { Router } from '@angular/router';
@@ -29,7 +29,6 @@ export class RegisterComponent {
 
     if (form.value.password !== form.value.rePassword) {
       this.userService.showMessage("The passwords don't match!");
-
       return;
     }
 
@@ -53,7 +52,6 @@ export class RegisterComponent {
             this.api.dataSave('userId', response._id);
             this.api.dataSave('username', response.username);
 
-            console.log('Registered successfully!');
             this.router.navigate(['/']);
             this.userService.showMessage('Registered successfully!');
           }

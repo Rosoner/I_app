@@ -1,4 +1,4 @@
-# Movies_app
+# I_app
 Movies library - Usage
 
 - Development server

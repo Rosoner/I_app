@@ -101,10 +101,10 @@ export class MovieComponent implements OnInit {
       this.editingMovie = false;
     }
 
-    setTimeout(() => {
+  setTimeout(() => {
       if (this.editingMovie) {
         this.editMovieForm?.controls['movieName'].setValue(this.movie.movieName);
-        this.editMovieForm?.controls['image'].setValue(this.movie.movieName);
+        this.editMovieForm?.controls['image'].setValue(this.movie.image);
         this.editMovieForm?.controls['movieGenre'].setValue(this.movie.movieGenre);
         this.editMovieForm?.controls['movieProducer'].setValue(this.movie.movieProducer);
         this.editMovieForm?.controls['summary'].setValue(this.movie.summary);
@@ -122,7 +122,7 @@ export class MovieComponent implements OnInit {
       return;
     }
 
-    let submitData: { movieName: string; movieGenre: string; movieProducer: string; summary: string; content: string } =
+    let submitData: { movieName: string; image: string; movieGenre: string; movieProducer: string; summary: string; content: string } =
       form.value;
 
     this.apiService.updateMovie(this.movie._id, submitData).subscribe({

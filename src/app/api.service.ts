@@ -90,6 +90,8 @@ export class ApiService {
 
   updateMovie(id: string, inputData: {}): Observable<any> {
     let requestData: any = inputData;
+    // get movie data
+    // set ownerId and userName
     requestData['_ownerId'] = localStorage.getItem('userId');
     requestData['username'] = localStorage.getItem('username');
 

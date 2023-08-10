@@ -60,16 +60,15 @@
 
 <div class="edit-movie" *ngIf="editingMovie">
 
-  <div class="msg">
-    <p>
-      Please apply your changes in the fields below.
-    </p>
-  </div>
+ 
 
 
 
   <form class="textarea" #editMovieForm="ngForm" (ngSubmit)="saveChanges()">
 
+    <div class="msg">        
+          Please apply your changes in the fields below.        
+    </div>
 
     <!-- movie name -->
     <div class="form-group" class="inputField">

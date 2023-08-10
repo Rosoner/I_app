@@ -98,7 +98,7 @@ label {
 .msg {
     margin: 0 auto;
     text-align: center;
-    color: green;    
+    color: rgb(35, 129, 35);    
 }
 
 .error {

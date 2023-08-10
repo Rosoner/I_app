@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NewMovieComponent } from './new-movie/new-movie.component';
 import { MovieComponent } from './movie/movie.component';
-import { MoviesComponent } from './movies.component';
 import { HomeComponent } from '../home/home.component';
 import { AuthActivate } from '../home/guard/auth.activate';
 import { MyMoviesComponent } from './my-movies/my-movies.component';

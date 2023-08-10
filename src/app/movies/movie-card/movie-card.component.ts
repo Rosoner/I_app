@@ -19,5 +19,6 @@ export class MovieCardComponent implements OnChanges {
     _ownerId: '',
   };
 
+  // lifecycle when data is changed
   ngOnChanges(changes: SimpleChanges): void {}
 }

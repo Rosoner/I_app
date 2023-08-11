@@ -15,8 +15,10 @@ import { MovieComponent } from './movies/movie/movie.component';
 import { NavigationComponent } from './home/navigation/navigation.component';
 import { MyMoviesComponent } from './movies/my-movies/my-movies.component';
 import { UserModule } from './user/user/user.module';
-//import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+//import { NotFoundComponent } from './not-found/not-found.component';
 
 /* import { appInterceptorProvider } from './app-interceptor'; */
 
@@ -28,9 +30,11 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     MovieCardComponent,
     NewMovieComponent,
-    MovieComponent,
+    MovieComponent,    
     NavigationComponent,
-    MyMoviesComponent,    
+    MyMoviesComponent,
+    HeaderComponent,
+    FooterComponent,
     //NotFoundComponent,
   ],
   imports: [

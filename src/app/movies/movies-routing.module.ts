@@ -6,6 +6,7 @@ import { HomeComponent } from '../home/home.component';
 import { AuthActivate } from '../home/guard/auth.activate';
 import { MyMoviesComponent } from './my-movies/my-movies.component';
 
+
 const routes: Routes = [
   {
     path: 'movies',
@@ -32,7 +33,7 @@ const routes: Routes = [
       {
         path: 'my-movies/:id',
         component: MovieComponent,
-      },
+      }
     ],
   },
 ];

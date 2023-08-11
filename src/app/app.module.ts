@@ -18,6 +18,7 @@ import { UserModule } from './user/user/user.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoaderComponent } from './loader/loader.component';
 //import { NotFoundComponent } from './not-found/not-found.component';
 
 /* import { appInterceptorProvider } from './app-interceptor'; */
@@ -35,6 +36,7 @@ import { FooterComponent } from './footer/footer.component';
     MyMoviesComponent,
     HeaderComponent,
     FooterComponent,
+    LoaderComponent,
     //NotFoundComponent,
   ],
   imports: [

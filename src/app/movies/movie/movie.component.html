@@ -1,4 +1,9 @@
-<div *ngIf="isLoading" class="loader">Loading movie...</div>
+<div *ngIf="isLoading">Loading movie...
+  <div>
+    <app-loader />
+  </div>
+</div>
+
 
 <div class="view-movie" *ngIf="!editingMovie">
 

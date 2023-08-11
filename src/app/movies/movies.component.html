@@ -1,4 +1,13 @@
-<div *ngIf="isLoading" class="loader">Loading movies...</div>
+<!-- <div *ngIf="isLoading" class="loader">Loading movies...</div> -->
+
+<div *ngIf="isLoading">Loading movies...
+  <div>
+    <app-loader />
+  </div>
+</div>
+
+
+
 <div class="cards">
   <app-movie-card
     *ngFor="let movie of movies"

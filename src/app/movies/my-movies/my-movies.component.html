@@ -1,4 +1,9 @@
-<div *ngIf="isLoading" class="loader">Loading movies...</div>
+<div *ngIf="isLoading">Loading my movies...
+    <div>
+      <app-loader />
+    </div>
+</div>
+
 <div class="cards">
     <app-movie-card *ngFor="let movie of moviesList" [data]="movie" [routerLink]="movie._id">
     </app-movie-card>

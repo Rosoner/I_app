@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user/user.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,9 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoaderComponent } from './loader/loader.component';
-//import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
-/* import { appInterceptorProvider } from './app-interceptor'; */
 
 @NgModule({
   declarations: [
@@ -37,8 +34,8 @@ import { LoaderComponent } from './loader/loader.component';
     HeaderComponent,
     FooterComponent,
     LoaderComponent,
-    //NotFoundComponent,
-  ],
+    NotFoundComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,8 +44,7 @@ import { LoaderComponent } from './loader/loader.component';
     FormsModule,
     UserModule,
   ],
-  providers: [
-    /* appInterceptorProvider */
+  providers: [  
   ],
   bootstrap: [AppComponent],
 })

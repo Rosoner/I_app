@@ -7,7 +7,10 @@ import { RegisterComponent } from './register/register.component';
 import { AuthLoginActivate } from './home/guard/auth.login.activate';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthActivate } from './home/guard/auth.activate';
-// import { NotFoundComponent } from './not-found/not-found.component';
+import { NewMovieComponent } from './movies/new-movie/new-movie.component';
+import { MyMoviesComponent } from './movies/my-movies/my-movies.component';
+import { MovieComponent } from './movies/movie/movie.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -18,6 +21,34 @@ const routes: Routes = [
   {
     path: 'movies',
     component: MoviesComponent,
+  },
+  {
+    path: 'movies',
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        component: HomeComponent,
+      },
+      {
+        path: 'new-movie',
+        component: NewMovieComponent,
+        canActivate: [AuthActivate],
+      },
+      {
+        path: 'my-movies',
+        component: MyMoviesComponent,
+        canActivate: [AuthActivate],
+      },
+      {
+        path: ':id',
+        component: MovieComponent,
+      },
+      {
+        path: 'my-movies/:id',
+        component: MovieComponent,
+      }
+    ],
   },
   {
     path: 'login',
@@ -34,7 +65,7 @@ const routes: Routes = [
     component: ProfileComponent,
     canActivate: [AuthActivate],
   },
-  //  { path: '**', component: NotFoundComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

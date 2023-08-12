@@ -33,8 +33,6 @@
             <div id="info-wrapper">
               <h2 id="title"><span><strong>Genre: </strong></span>{{ movie.movieGenre }}</h2>
 
-
-
               <h2 id="title"><span>Producer: </span>{{ movie.movieProducer }}</h2>
               <div id="summary"><span><strong>Summary:</strong></span> {{movie.summary}}</div>
               <br>
@@ -61,13 +59,10 @@
   </div>
 </div>
 
+
 <!-- Edit mode movie -->
 
 <div class="edit-movie" *ngIf="editingMovie">
-
- 
-
-
 
   <form class="textarea" #editMovieForm="ngForm" (ngSubmit)="saveChanges()">
 
@@ -76,6 +71,7 @@
     </div>
 
     <!-- movie name -->
+    
     <div class="form-group" class="inputField">
       <p>Movie title:</p>
       <input type="text" id="title" name="movieName" #movieNameInput="ngModel" ngModel required minlength="2"
@@ -92,12 +88,11 @@
     </ng-container>
 
     <!-- movie image -->
+
     <div class="form-group" class="inputField">
       <p>Movie image:</p>
       <input type="path" id="image" name="image" #imageInput="ngModel" ngModel [value]="movie.image" />
     </div>
-
-
 
     <!-- movie genre -->
 

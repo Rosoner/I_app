@@ -25,17 +25,17 @@ export class MovieComponent implements OnInit {
     _ownerId: '',
   };
 
-  movieDataBuffer: Movie = {
-    movieName: '',
-    image: '',
-    movieGenre: '',
-    movieProducer: '',
-    summary: '',
-    content: '',
-    username: '',
-    _id: '',
-    _ownerId: '',
-  };
+  // movieDataBuffer: Movie = {
+  //   movieName: '',
+  //   image: '',
+  //   movieGenre: '',
+  //   movieProducer: '',
+  //   summary: '',
+  //   content: '',
+  //   username: '',
+  //   _id: '',
+  //   _ownerId: '',
+  // };
 
   isLoading = false;
   loggedInUser: string | null = '';

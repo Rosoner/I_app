@@ -216,6 +216,5 @@ table td p span {
 
 .hr-wrapper {  
   text-align:center ;  
-  min-width:100%;
-  color: rgb(107, 77, 13);
+  width:100%;
 }
